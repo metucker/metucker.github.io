@@ -1,0 +1,156 @@
+:root {
+    --bg: #ffffff;
+    --text: #1f2933;
+    --accent: #6B5FD6;
+    --accent-alt: #DBE8A0;
+    --card: #f4f5f7;
+}
+  
+[data-theme="dark"] {
+    --bg: #0f1020;
+    --text: #eaeaf0;
+    --accent: #ADA0E8;
+    --accent-alt: #DBE8A0;
+    --card: #1a1b2e;
+}
+  
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 16px;
+}
+  
+a {
+    color: var(--accent);
+}
+  
+a:focus, a:hover {
+    text-decoration: underline;
+    outline: none;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--bg);
+    color: var(--text);
+    padding: 8px 16px;
+    z-index: 100;
+}
+  
+.skip-link:focus {
+    top: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    border-bottom: 2px solid var(--accent);
+}
+  
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+#theme-toggle {
+    background: none;
+    border: 2px solid var(--accent);
+    border-radius: 999px;
+    padding: 0.5rem 0.9rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--accent);
+}
+  
+#theme-toggle:focus {
+    outline: 3px solid var(--accent-alt);
+    outline-offset: 2px;
+}
+
+main {
+    padding: 1.25rem;
+}
+  
+section {
+    background: var(--card);
+    padding: 1.25rem;
+    border-radius: 12px;
+    margin-bottom: 1.25rem;
+}
+  
+h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: var(--accent);
+}
+  
+h3 {
+    margin-bottom: 0.25rem;
+}
+  
+ul {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 640px) {
+    body {
+        font-size: 17px;
+    }
+  
+    main {
+        max-width: 720px;
+        margin: 2rem auto;
+    }
+  
+    h1 {
+         font-size: 2rem;
+    }
+  
+    section {
+         padding: 1.5rem;
+    }
+}
+  
+@media (min-width: 900px) {
+    main {
+        max-width: 900px;
+    }
+  
+    section {
+        padding: 1.75rem;
+    }
+}
+  
+@media print {
+    body {
+        background: #fff !important;
+        color: #000 !important;
+        font-size: 12pt;
+    }
+    #theme-toggle, .skip-link {
+        display: none;
+    }
+    section {
+        page-break-inside: avoid;
+    }
+}
