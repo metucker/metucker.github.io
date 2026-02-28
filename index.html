@@ -7,7 +7,8 @@
     <title> Marina Tucker - Software Engineer Resume</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"/>
+    <link rel="preload" href="path/to/font-awesome/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"></noscript>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -59,4 +60,4 @@
         </section>
     </main>
 </body>
-<script src="./script.js"></script>
+<script src="./script.js" defer></script>
