@@ -1,42 +1,21 @@
 :root {
     --bg: #ffffff;
     --text: #1f2933;
-    --accent: #6b5fd6;
-    --accent-alt: #0f1020;
+    --accent: #6B5FD6;
+    --accent-alt: #DBE8A0;
     --card: #f4f5f7;
 }
   
 [data-theme="dark"] {
     --bg: #0f1020;
     --text: #eaeaf0;
-    --accent: #ada0e8;
-    --accent-alt: #dbe8a0;
+    --accent: #ADA0E8;
+    --accent-alt: #DBE8A0;
     --card: #1a1b2e;
 }
   
 * {
     box-sizing: border-box;
-}
-
-.github-corner svg {
-    fill: var(--card);
-    color: var(--card);
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.octo-arm {
-    fill: var(--accent);
-    transform-origin: 130px 106px;
-}
-
-.octo-body {
-    fill: var(--accent);
-}
-
-.github-corner:hover .octo-arm {
-    animation: octocat-wave 560ms ease-in-out;
 }
   
 body {
@@ -47,20 +26,14 @@ body {
     line-height: 1.6;
     font-size: 16px;
 }
-
+  
 a {
     color: var(--accent);
-    text-decoration: none;
 }
-
-a:hover,
-a:focus {
+  
+a:focus, a:hover {
     text-decoration: underline;
-}
-
-a:focus {
-    outline: 2px solid var(--accent-alt);
-    outline-offset: 2px;
+    outline: none;
 }
 
 .skip-link {
@@ -81,7 +54,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 3rem;
+    padding: 1.25rem;
     border-bottom: 2px solid var(--accent);
 }
   
@@ -137,16 +110,6 @@ footer {
     padding: 1.5rem;
     opacity: 0.7;
     font-size: 0.9rem;
-}
-
-@keyframes octocat-wave {
-
-  0%,100% { transform: rotate(0); }
-
-  20%,60% { transform: rotate(-25deg); }
-
-  40%,80% { transform: rotate(10deg); }
-
 }
 
 @media (min-width: 640px) {
