@@ -17,6 +17,27 @@
 * {
     box-sizing: border-box;
 }
+
+.github-corner svg {
+    fill: var(--card);
+    color: var(--card);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.octo-arm {
+    fill: var(--accent);
+    transform-origin: 130px 106px;
+}
+
+.octo-body {
+    fill: var(--accent);
+}
+
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+}
   
 body {
     margin: 0;
@@ -60,7 +81,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem;
+    padding: 1rem 3rem;
     border-bottom: 2px solid var(--accent);
 }
   
@@ -116,6 +137,16 @@ footer {
     padding: 1.5rem;
     opacity: 0.7;
     font-size: 0.9rem;
+}
+
+@keyframes octocat-wave {
+
+  0%,100% { transform: rotate(0); }
+
+  20%,60% { transform: rotate(-25deg); }
+
+  40%,80% { transform: rotate(10deg); }
+
 }
 
 @media (min-width: 640px) {
